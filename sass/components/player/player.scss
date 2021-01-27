@@ -1,0 +1,406 @@
+.music-box {
+  display: block;
+  width: 100%;
+  max-height: 600px;
+  min-height: 300px;
+  @media screen and (max-width: 992px) {
+    padding-left: 30px;
+  }
+
+  .player-header {
+    .player-breadcrumb {
+      width: 100%;
+      background-color: transparent;
+      color: #6871a2;
+      font-size: 1rem;
+      @media screen and (max-width: 320px) {
+        font-size: 12px;
+      }
+    }
+    .song-title {
+      color: #ffffff;
+      font-size: 1.875em;
+      margin: 1rem 0rem;
+      @media screen and (max-width: 992px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size: 24px;
+      }
+    }
+  }
+  .player {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    // background-image: url('https://images.pexels.com/photos/262034/pexels-photo-262034.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100%);
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(20px);
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: rgba(8, 10, 31, 0.8);
+      }
+    }
+    // detail style
+    .details {
+      .track-art {
+        margin: 25px 25px 25px 0px;
+        height: 250px;
+        width: 250px;
+
+        background-size: cover;
+        background-position: center;
+        @media screen and (max-width: 992px) {
+          width: 134px;
+          height: 134px;
+        }
+        @media screen and (max-width: 320px) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .track-now-playing {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        .track-artist {
+          height: 90px;
+          width: 90px;
+          border-radius: 50%;
+          background-size: cover;
+          @media screen and (max-width: 992px) {
+            margin-top: 10px;
+            width: 55px;
+            height: 55px;
+          }
+          @media screen and (max-width: 320px) {
+            margin-top: 25px;
+            width: 45px;
+            height: 45px;
+          }
+        }
+        .track-name {
+          font-size: 1.5rem;
+          color: #ffffff;
+          @media screen and (max-width: 992px) {
+            font-size: 1.2rem;
+          }
+          @media screen and (max-width: 320px) {
+            font-size: 13px;
+          }
+        }
+        .track-lyrics {
+          color: #6871a2;
+          font-size: 1.1rem;
+          @media screen and (max-width: 320px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .seek {
+      height: 4px;
+      width: 100%;
+      margin: 0rem auto;
+      position: relative;
+
+      background-color: #2d304f;
+      .current-seeking {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100%;
+        background-color: #30c592;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .playpause-track,
+    .forward-track,
+    .repeat-track {
+      margin-right: 2rem;
+      padding: 25px 0px;
+      opacity: 0.8;
+
+      /* Smoothly transition the opacity */
+      transition: opacity 0.2s;
+      @media screen and (max-width: 992px) {
+        margin-right: 0.8rem;
+      }
+      @media screen and (max-width: 320px) {
+        i.fa {
+          font-size: 14px !important;
+        }
+        i.fa.fa-play-circle,
+        i.fa.fa-pause-circle {
+          font-size: 30px !important;
+        }
+      }
+    }
+
+    .playpause-track:hover,
+    .forward-track:hover,
+    .repeat-track {
+      opacity: 1;
+    }
+
+    .repeat-track {
+      svg {
+        width: 20px;
+        height: 20px;
+        opacity: 0.8;
+        cursor: pointer;
+        path {
+          fill: #6871a2;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    /* Modify the appearance of the slider */
+    .seek_slider,
+    .volume_slider {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 5px;
+      background: black;
+      opacity: 0.7;
+      -webkit-transition: 0.2s;
+      transition: opacity 0.2s;
+    }
+
+    /* Modify the appearance of the slider thumb */
+    .seek_slider::-webkit-slider-thumb,
+    .volume_slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      background: white;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .seek_slider:hover,
+    .volume_slider:hover {
+      opacity: 1;
+    }
+
+    .seek_slider {
+      width: 60%;
+    }
+
+    .volume_slider {
+      width: 30%;
+    }
+
+    .current-time,
+    .total-duration {
+      padding: 10px;
+    }
+    i.fa {
+      cursor: pointer;
+      color: #6871a2;
+      @media screen and (max-width: 992px) {
+        font-size: 16px !important;
+      }
+    }
+    i.fa-play-circle,
+    i.fa-pause-circle {
+      font-size: 45px;
+      color: #ffffff;
+      @media screen and (max-width: 992px) {
+        font-size: 3rem !important;
+      }
+    }
+    i.fa-volume-down,
+    i.fa-volume-up {
+      padding: 10px;
+    }
+
+    i.fa-step-forward,
+    i.fa-step-backward {
+      font-size: 20px;
+    }
+  }
+
+  .autoplay_volume {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    height: 100%; // adding height becase we use span tag (inline as default)
+
+    .autoplay,
+    .volumne {
+      padding: 25px 0px;
+    }
+    .autoplay {
+      margin-right: 2rem;
+      @media screen and (max-width: 992px) {
+        margin-right: 0.5rem;
+        font-size: 14px;
+      }
+    }
+
+    .fa-volume-up {
+      color: #ffffff;
+    }
+  }
+  .time-number {
+    font-size: 14px;
+    .current-time {
+      color: #30c592;
+    }
+    .total-duration {
+      color: #6871a2;
+    }
+  }
+}
+.now-playing-info {
+  // padding-right: 2rem;
+  @media screen and (max-width: 992px) {
+    padding-left: 30px;
+  }
+  .download-share {
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+      margin-right: 8px;
+      i {
+        color: #30c592;
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    }
+  }
+  .lyrics-wrapper {
+    margin-bottom: 2rem;
+    padding: 24px !important;
+    border: 1px solid #6871a2;
+    .song-header {
+      color: #ffffff;
+      .track-name {
+        font-size: 34px;
+        display: block;
+        span {
+          text-transform: capitalize;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 320px) {
+          font-size: 16px;
+        }
+      }
+      .singer {
+        font-size: 20px;
+        margin-bottom: 0rem !important;
+        span {
+          text-transform: capitalize;
+        }
+        @media screen and (max-width: 992px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 320px) {
+          font-size: 12px;
+        }
+      }
+    }
+    .copy-lyrics {
+      span {
+        font-size: 16px;
+        color: #ffffff;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+        &:nth-child(1) {
+          margin-right: 8px;
+        }
+        &:hover {
+          color: #30c592;
+        }
+        i {
+          color: #30c592;
+        }
+      }
+    }
+
+    .lyrics {
+      color: #6871a2;
+      .truncate {
+        width: 600px;
+        height: 250px;
+        overflow: hidden;
+        transition: height 200ms ease-in-out;
+        &.show-all {
+          height: 100%;
+        }
+        @media screen and (max-width: 992px) {
+          width: 100% !important;
+          font-size: 16px;
+        }
+        @media screen and (max-width: 992px) {
+          width: 100% !important;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .see-all-lyrics {
+      text-align: center;
+      button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0rem 2rem;
+
+        border: none;
+        outline: none;
+        background: transparent;
+
+        opacity: 0.85;
+        &:hover {
+          opacity: 1;
+        }
+        span {
+          color: #30c592;
+          i {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

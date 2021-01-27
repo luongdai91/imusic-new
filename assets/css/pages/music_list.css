@@ -1,0 +1,248 @@
+.heading-primary {
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  color: #30c592; }
+
+.playpause {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .playpause .circle {
+    position: absolute;
+    top: 55%;
+    left: 36%;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; }
+  .playpause label {
+    display: block;
+    box-sizing: border-box;
+    z-index: 4;
+    width: 0;
+    height: 16px;
+    cursor: pointer;
+    border-color: transparent transparent transparent #ffffff;
+    transition: 100ms all ease;
+    will-change: border-width;
+    border-style: solid;
+    border-width: 8px 0 8px 12px; }
+  .playpause input[type='checkbox'] {
+    visibility: hidden; }
+    .playpause input[type='checkbox']:checked + label {
+      border-style: double;
+      border-width: 0px 0 0px 9px; }
+
+.music-list__header {
+  margin-top: 4.5rem;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between; }
+  .music-list__header .music-list__title {
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    color: #30c592; }
+  .music-list__header .tabs-group {
+    display: flex; }
+
+.song-card-wrapper {
+  padding-left: 0 !important;
+  padding-top: 20px; }
+  .song-card-wrapper:hover .song-card {
+    background-color: rgba(0, 0, 0, 0.2); }
+    .song-card-wrapper:hover .song-card a .song-card__image .overlay,
+    .song-card-wrapper:hover .song-card a .song-card__image .playpause {
+      visibility: visible; }
+
+.song-card {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #6871a2;
+  position: relative; }
+  .song-card .song-card__image {
+    position: relative;
+    padding: 0 !important;
+    max-width: 95px !important; }
+    .song-card .song-card__image img {
+      width: 95px;
+      height: 95px; }
+    .song-card .song-card__image .overlay {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 2; }
+    .song-card .song-card__image .playpause {
+      visibility: hidden;
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .song-card .song-card__image .playpause .circle {
+        position: absolute;
+        top: 55%;
+        left: 36%;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1; }
+      .song-card .song-card__image .playpause label {
+        display: block;
+        box-sizing: border-box;
+        z-index: 4;
+        width: 0;
+        height: 16px;
+        cursor: pointer;
+        border-color: transparent transparent transparent #ffffff;
+        transition: 100ms all ease;
+        will-change: border-width;
+        border-style: solid;
+        border-width: 8px 0 8px 12px; }
+      .song-card .song-card__image .playpause input[type='checkbox'] {
+        visibility: hidden; }
+        .song-card .song-card__image .playpause input[type='checkbox']:checked + label {
+          border-style: double;
+          border-width: 0px 0 0px 9px; }
+  .song-card .song-card__info {
+    padding-left: 22px; }
+    .song-card .song-card__info .song-title {
+      font-size: 22px;
+      color: #ffffff; }
+    .song-card .song-card__info .song-singer {
+      color: #6871a2; }
+  .song-card .song-card__listen-count {
+    padding-left: 0rem !important; }
+    .song-card .song-card__listen-count span {
+      color: #6871a2; }
+      .song-card .song-card__listen-count span svg {
+        fill: #6871a2; }
+    .song-card .song-card__listen-count span:not(:last-child) {
+      margin-right: 0.5rem; }
+    .song-card .song-card__listen-count.playing-view span:not(:last-child) {
+      margin-right: 1.875rem; }
+
+.song-card__playing .song-card a .song-card__image .overlay,
+.song-card__playing .song-card a .song-card__image .playpause {
+  visibility: visible; }
+
+.music-ranking {
+  margin: 4.5rem 0rem 2.5rem 2rem; }
+  .music-ranking .music-ranking__header {
+    margin-bottom: 24px; }
+    .music-ranking .music-ranking__header div svg {
+      margin-left: 1.06rem; }
+      .music-ranking .music-ranking__header div svg path {
+        stroke: #30c592; }
+  .music-ranking .music-ranking__tabs {
+    margin-bottom: 34px; }
+  .music-ranking .music-ranking__highlight {
+    position: relative;
+    display: block; }
+    .music-ranking .music-ranking__highlight > div {
+      padding: 0rem !important; }
+    .music-ranking .music-ranking__highlight .song-card__highlight img {
+      width: 100%; }
+    .music-ranking .music-ranking__highlight .rank-number {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 50px;
+      height: 50px;
+      background-color: #b92c2c;
+      color: #ffffff;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .music-ranking .music-ranking__highlight > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
+    .music-ranking .music-ranking__highlight .song-highlight {
+      margin-top: 20px; }
+      .music-ranking .music-ranking__highlight .song-highlight .song-highlight__title span:nth-child(1) {
+        font-size: 21px;
+        color: #ffffff; }
+      .music-ranking .music-ranking__highlight .song-highlight .song-highlight__title span:nth-child(2) {
+        color: #6871a2;
+        font-size: 19px; }
+      .music-ranking .music-ranking__highlight .song-highlight .song-highlight__listen-count span:nth-child(1) {
+        margin-right: 8px;
+        display: inline-block !important;
+        width: 20px !important;
+        height: 20px !important; }
+        .music-ranking .music-ranking__highlight .song-highlight .song-highlight__listen-count span:nth-child(1) img {
+          width: 14px;
+          height: 13px; }
+      .music-ranking .music-ranking__highlight .song-highlight .song-highlight__listen-count span:nth-child(2) {
+        color: #6871a2; }
+
+.second-rank {
+  margin-top: 40px; }
+  .second-rank .rank-list__item-number {
+    color: #edbf40 !important; }
+
+.third-rank .rank-list__item-number {
+  color: #9bce33 !important; }
+
+.rank-list__item {
+  margin-bottom: 31px; }
+  .rank-list__item.song-playing .overlay,
+  .rank-list__item.song-playing .playpause {
+    visibility: visible !important; }
+  .rank-list__item:hover .overlay,
+  .rank-list__item:hover .playpause {
+    visibility: visible !important; }
+  .rank-list__item .rank-list__item-number {
+    font-size: 20px;
+    color: #6871a2; }
+    .rank-list__item .rank-list__item-number img {
+      width: 18px !important;
+      height: 20px !important; }
+  .rank-list__item .rank-list__item-info .row .col-2 {
+    position: relative; }
+    .rank-list__item .rank-list__item-info .row .col-2 .overlay {
+      visibility: hidden;
+      left: 15px;
+      width: 50px;
+      height: 50px;
+      background: transparent linear-gradient(180deg, #080a1f00 0%, #080a1f 100%) 0% 0% no-repeat padding-box; }
+    .rank-list__item .rank-list__item-info .row .col-2 .playpause {
+      visibility: hidden;
+      left: 56% !important; }
+    .rank-list__item .rank-list__item-info .row .col-2 img {
+      width: 50px;
+      height: 50px; }
+  .rank-list__item .rank-list__item-info .row .col-8 {
+    padding-left: 1rem; }
+    .rank-list__item .rank-list__item-info .row .col-8 .song-name {
+      color: #ffffff !important;
+      font-size: 16px; }
+    .rank-list__item .rank-list__item-info .row .col-8 .song-singer {
+      color: #6871a2;
+      font-size: 16px;
+      text-transform: uppercase; }
+  .rank-list__item .rank-list__item-info .row .song-more-info span:nth-child(1) {
+    margin-right: 8px;
+    display: inline-block !important;
+    width: 20px !important;
+    height: 20px !important; }
+    .rank-list__item .rank-list__item-info .row .song-more-info span:nth-child(1) img {
+      width: 14px;
+      height: 13px; }
+  .rank-list__item .rank-list__item-info .row .song-more-info span:nth-child(2) {
+    color: #6871a2; }
+  .rank-list__item .rank-list__item-info .row .song-more-info span.duration {
+    display: inline-block;
+    color: #6871a2;
+    font-size: 20px; }

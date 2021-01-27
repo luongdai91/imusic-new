@@ -1,0 +1,83 @@
+.post-header {
+  color: #6871a2; }
+  .post-header span {
+    cursor: pointer;
+    transition: all 200ms ease-in-out; }
+    .post-header span:not(:last-child) {
+      margin-right: 10px; }
+    .post-header span.small {
+      font-size: 16px !important; }
+    .post-header span.normal {
+      font-size: 20px !important; }
+    .post-header span.large {
+      font-size: 24px !important; }
+    .post-header span.active {
+      color: #30c592; }
+    .post-header span:hover {
+      color: #30c592; }
+
+.post-detail .m-stuff {
+  margin-bottom: 10px; }
+  .post-detail .m-stuff .border-bottom {
+    position: relative; }
+    .post-detail .m-stuff .border-bottom::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 3px;
+      background-color: #30c592; }
+
+.post-detail .estimate-time {
+  color: #30c592; }
+
+.post-detail .post-content {
+  margin-top: 1rem;
+  color: #ffffff !important; }
+  .post-detail .post-content .post-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 2rem; }
+  .post-detail .post-content .post-highlight {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 22px; }
+  .post-detail .post-content .post-image {
+    margin: 2rem 0rem 1rem 0rem;
+    width: 100%; }
+    .post-detail .post-content .post-image img {
+      width: 100%;
+      height: auto; }
+    .post-detail .post-content .post-image .image-caption {
+      color: #6871a2;
+      font-size: 16px;
+      line-height: 2.7; }
+
+.like-share .text {
+  color: #ffffff; }
+
+.like-share .social-icons .icon {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #30c592;
+  transition: all 200ms ease-in-out;
+  cursor: pointer; }
+  .like-share .social-icons .icon:not(:last-child) {
+    margin-right: 20px; }
+  .like-share .social-icons .icon svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    fill: #30c592;
+    transition: all 200ms ease-in-out; }
+  .like-share .social-icons .icon:hover {
+    background-color: #30c592; }
+    .like-share .social-icons .icon:hover svg {
+      fill: #ffffff; }

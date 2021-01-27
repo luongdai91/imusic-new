@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'im-reg';
+  src: url('../font/SVN-Gilroy-Regular.otf');
+}
+
+@font-face {
+  font-family: 'im-med';
+  src: url('../font/SVN-Gilroy-Medium.otf');
+}
+
+@font-face {
+  font-family: 'im-sb';
+  src: url('../font/SVN-Gilroy-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'im-bold';
+  src: url('../font/SVN-Gilroy-Bold.otf');
+}
+
+@font-face {
+  font-family: 'im-italic';
+  src: url('../font/SVN-Gilroy-Italic.otf');
+}
+
+* {
+  font-family: im-reg;
+  --animate-duration: 0.5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr.im {
+  border-top: 1px solid #2e2e50;
+  opacity: 0.75;
+}
+
+*:focus {
+  outline: none;
+}
+
+.rm-pd {
+  padding: 0px !important;
+}
+
+.rm-xs-pd {
+  @media screen and (max-width: 375px) {
+    padding: 0px !important;
+  }
+}
+
+.rm-md-pd {
+  @media screen and (min-width: 414px) {
+    padding: 0px !important;
+  }
+}
+
+.rm-lg-pd {
+  @media screen and (min-width: 1200px) {
+    padding: 0px !important;
+  }
+}
+
+// remove padding right
+.rm-lg-pr {
+  @media screen and(min-width: 992px) {
+    padding-right: 0px !important;
+  }
+}
+
+.im-wrapper {
+  width: 1250px;
+
+  &.container {
+    padding: 0px;
+    max-width: 1350px;
+  }
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: fit-content !important;
+}

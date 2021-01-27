@@ -1,0 +1,85 @@
+.player-breadcrumb {
+  color: #6871a2; }
+
+.player-title {
+  color: #ffffff;
+  font-size: 30px; }
+
+.lyrics-wrapper {
+  border: 1px solid #6871a2;
+  padding: 34px; }
+  .lyrics-wrapper .lyrics-header .song-info {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff; }
+    .lyrics-wrapper .lyrics-header .song-info p:nth-child(1) {
+      font-size: 30px;
+      font-family: im-med; }
+      .lyrics-wrapper .lyrics-header .song-info p:nth-child(1) span {
+        text-transform: capitalize; }
+    .lyrics-wrapper .lyrics-header .song-info p:nth-child(2) {
+      font-size: 20px;
+      font-weight: im-reg; }
+      .lyrics-wrapper .lyrics-header .song-info p:nth-child(2) span {
+        text-transform: capitalize; }
+    @media screen and (max-width: 768px) {
+      .lyrics-wrapper .lyrics-header .song-info p:nth-child(1) {
+        font-size: 24px; }
+      .lyrics-wrapper .lyrics-header .song-info p:nth-child(2) {
+        font-size: 14px; } }
+  .lyrics-wrapper .lyrics-header .copy-lyrics {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; }
+    .lyrics-wrapper .lyrics-header .copy-lyrics span {
+      color: #ffffff; }
+      .lyrics-wrapper .lyrics-header .copy-lyrics span:nth-child(1) {
+        margin-right: 8px; }
+      .lyrics-wrapper .lyrics-header .copy-lyrics span svg {
+        width: 16px;
+        height: 16px;
+        fill: #30c592;
+        cursor: pointer;
+        transition: all 200ms ease-in-out; }
+        .lyrics-wrapper .lyrics-header .copy-lyrics span svg:hover {
+          fill: #6871a2; }
+  .lyrics-wrapper .lyrics-body .lyrics {
+    color: #6871a2; }
+    .lyrics-wrapper .lyrics-body .lyrics .truncate {
+      width: 600px;
+      height: 250px;
+      overflow: hidden;
+      transition: height 200ms ease-in-out; }
+      .lyrics-wrapper .lyrics-body .lyrics .truncate.show-all {
+        height: 100%; }
+      @media screen and (max-width: 992px) {
+        .lyrics-wrapper .lyrics-body .lyrics .truncate {
+          width: 100% !important;
+          font-size: 16px; } }
+      @media screen and (max-width: 992px) {
+        .lyrics-wrapper .lyrics-body .lyrics .truncate {
+          width: 100% !important;
+          font-size: 14px; } }
+
+.see-all-lyrics {
+  text-align: center; }
+  .see-all-lyrics button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    opacity: 0.85; }
+    .see-all-lyrics button:hover {
+      opacity: 1; }
+    .see-all-lyrics button span {
+      color: #30c592; }
+      .see-all-lyrics button span svg {
+        fill: #30c592;
+        width: 16px;
+        font-size: 1rem; }
+.im-wrapper .breadcrumb{margin:0;padding:0;background:none}.breadcrumb a{color:#6871a2}.bre-nav,.breadcrumb a:hover{color:#929ac7}.bre-nav{padding:0 7px}

@@ -1,0 +1,213 @@
+.bxh-nav-tabs {
+  width: 288px;
+  @media screen and (min-width: 992px) and (max-width: 1268px) {
+    ul {
+      display: flex;
+      li {
+        width: 33.33% !important;
+        a {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
+
+.bxh-hit-wrapper {
+  max-width: 848px;
+  max-height: 492px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 15px;
+    width: calc(100% - 28px);
+    height: 100%;
+    background: transparent linear-gradient(180deg, #080a1f00 0%, #080a1f 100%)
+      0% 0% no-repeat padding-box;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bxh-hit-info {
+    position: absolute;
+    bottom: 31px;
+    left: 34px;
+    z-index: 1000;
+    .song {
+      font-size: 22px;
+      color: #ffffff;
+    }
+    .artist {
+      color: #6871a2;
+    }
+  }
+}
+
+.bxh-img-wrapper {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  img {
+    width: 50px;
+  }
+}
+
+.bxh-song {
+  color: #62659a;
+  .song-large-img-wrapper {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    img {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+    }
+    @media screen and (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .truncate {
+    width: 165px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media screen and (max-width: 2880px) {
+      width: 250px;
+    }
+    @media screen and (max-width: 430px) {
+      width: 150px;
+    }
+  }
+  .name {
+    color: #fff;
+    font-size: 12pt;
+  }
+  .artist {
+    font-size: 10pt;
+  }
+  .play-overlay {
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #2e2e50;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    .main {
+      width: 32px;
+      fill: #ffffff;
+    }
+  }
+  .listen-count {
+    font-size: 14px;
+    text-decoration: none;
+    color: #62659a;
+    svg {
+      width: 16px;
+      fill: #6871a2;
+    }
+  }
+  .center-control,
+  .right-control {
+    .item {
+      font-size: 16px;
+      text-decoration: none;
+      color: #62659a;
+      svg {
+        fill: #62659a;
+        width: 16px;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          fill: #30c592;
+        }
+      }
+    }
+  }
+  .index {
+    display: flex;
+    align-items: center;
+    &[role='1st'] {
+      color: #b92c2c;
+    }
+    &[role='2nd'] {
+      color: #f2ca59;
+    }
+    &[role='3rd'] {
+      color: #a6d54d;
+    }
+  }
+  .triangle {
+    &[role='up'] {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 9px solid #30c592;
+    }
+    &[role='down'] {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 9px solid #b92c2c;
+    }
+    &[role='hyphens'] {
+      height: 0px;
+      width: 16px;
+      border: 1px solid #6871a2;
+    }
+  }
+  .download-btn {
+    align-self: center;
+  }
+  &:hover {
+    .play-overlay {
+      display: flex;
+    }
+  }
+}
+
+// fix layout does not work when merged
+.song-item-med {
+  .truncate {
+    @media screen and (max-width: 992px) {
+      width: 300px !important;
+    }
+    @media screen and (max-width: 414px) {
+      width: 150px !important;
+    }
+  }
+  > div {
+    > div {
+      @media screen and (max-width: 992px) {
+        transform: translateX(24px);
+      }
+      .px-1 {
+        .row {
+          div:nth-child(2) {
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.im-top-chart .im-top-st .play-overlay {
+  width: 96% !important;
+}

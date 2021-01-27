@@ -1,0 +1,315 @@
+@import '../components/heading/heading.scss';
+@import '../components/playpause/playpause.scss';
+.music-list__header {
+  margin-top: 4.5rem;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  .music-list__title {
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    color: #30c592;
+  }
+  .tabs-group {
+    display: flex;
+  }
+}
+
+.song-card-wrapper {
+  padding-left: 0 !important;
+  padding-top: 20px;
+  &:hover {
+    .song-card {
+      background-color: rgba(0, 0, 0, 0.2);
+      a {
+        .song-card__image {
+          .overlay,
+          .playpause {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+
+.song-card {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #6871a2;
+  position: relative;
+  .song-card__image {
+    position: relative;
+    padding: 0 !important;
+    max-width: 95px !important;
+    img {
+      width: 95px;
+      height: 95px;
+    }
+    .overlay {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+    }
+    // Play/Pause button with playing song-card
+    .playpause {
+      visibility: hidden;
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .circle {
+        position: absolute;
+        top: 55%;
+        left: 36%;
+        width: 35px;
+        height: 35px;
+        border: 1px solid #ffffff;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+      label {
+        display: block;
+        box-sizing: border-box;
+        z-index: 4;
+        width: 0;
+        height: 16px;
+        cursor: pointer;
+        border-color: transparent transparent transparent #ffffff;
+        transition: 100ms all ease;
+        will-change: border-width;
+        // pause state
+        border-style: solid;
+        border-width: 8px 0 8px 12px;
+      }
+      input[type='checkbox'] {
+        visibility: hidden;
+        &:checked + label {
+          // play state
+          border-style: double;
+          border-width: 0px 0 0px 9px;
+        }
+      }
+    }
+  }
+  .song-card__info {
+    padding-left: 22px;
+    .song-title {
+      font-size: 22px;
+      color: #ffffff;
+    }
+    .song-singer {
+      color: #6871a2;
+    }
+  }
+  .song-card__listen-count {
+    padding-left: 0rem !important;
+    span {
+      color: #6871a2;
+      svg {
+        fill: #6871a2;
+      }
+    }
+    span:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+    &.playing-view {
+      span:not(:last-child) {
+        margin-right: 1.875rem;
+      }
+    }
+  }
+}
+
+.song-card__playing {
+  .song-card {
+    a {
+      .song-card__image {
+        .overlay,
+        .playpause {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+// music ranking
+.music-ranking {
+  margin: 4.5rem 0rem 2.5rem 2rem;
+  .music-ranking__header {
+    margin-bottom: 24px;
+    div {
+      svg {
+        margin-left: 1.06rem;
+        path {
+          stroke: #30c592;
+        }
+      }
+    }
+  }
+  .music-ranking__tabs {
+    margin-bottom: 34px;
+  }
+  .music-ranking__highlight {
+    position: relative;
+    display: block;
+
+    > div {
+      padding: 0rem !important;
+    }
+    .song-card__highlight {
+      img {
+        width: 100%;
+      }
+    }
+    .rank-number {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 50px;
+      height: 50px;
+      background-color: #b92c2c;
+      color: #ffffff;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .song-highlight {
+      margin-top: 20px;
+      .song-highlight__title {
+        span:nth-child(1) {
+          font-size: 21px;
+          color: #ffffff;
+        }
+        span:nth-child(2) {
+          color: #6871a2;
+          font-size: 19px;
+        }
+      }
+      .song-highlight__listen-count {
+        span:nth-child(1) {
+          margin-right: 8px;
+          display: inline-block !important;
+          width: 20px !important;
+          height: 20px !important;
+          img {
+            width: 14px;
+            height: 13px;
+          }
+        }
+        span:nth-child(2) {
+          color: #6871a2;
+        }
+      }
+    }
+  }
+}
+
+.second-rank {
+  margin-top: 40px;
+  .rank-list__item-number {
+    color: #edbf40 !important;
+  }
+}
+
+.third-rank {
+  .rank-list__item-number {
+    color: #9bce33 !important;
+  }
+}
+
+.rank-list__item {
+  margin-bottom: 31px;
+  &.song-playing {
+    .overlay,
+    .playpause {
+      visibility: visible !important;
+    }
+  }
+  &:hover {
+    .overlay,
+    .playpause {
+      visibility: visible !important;
+    }
+  }
+
+  .rank-list__item-number {
+    font-size: 20px;
+    color: #6871a2;
+    img {
+      width: 18px !important;
+      height: 20px !important;
+    }
+  }
+  .rank-list__item-info {
+    .row {
+      .col-2 {
+        position: relative;
+        .overlay {
+          visibility: hidden;
+          left: 15px;
+          width: 50px;
+          height: 50px;
+          background: transparent
+            linear-gradient(180deg, #080a1f00 0%, #080a1f 100%) 0% 0% no-repeat
+            padding-box;
+        }
+        .playpause {
+          visibility: hidden;
+          left: 56% !important;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .col-8 {
+        padding-left: 1rem;
+        .song-name {
+          color: #ffffff !important;
+          font-size: 16px;
+        }
+        .song-singer {
+          color: #6871a2;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+      }
+
+      .song-more-info {
+        span:nth-child(1) {
+          margin-right: 8px;
+          display: inline-block !important;
+          width: 20px !important;
+          height: 20px !important;
+          img {
+            width: 14px;
+            height: 13px;
+          }
+        }
+        span:nth-child(2) {
+          color: #6871a2;
+        }
+        span.duration {
+          display: inline-block;
+          color: #6871a2;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

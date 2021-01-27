@@ -1,0 +1,116 @@
+.post-header {
+  color: #6871a2;
+
+  span {
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &.small {
+      font-size: 16px !important;
+    }
+    &.normal {
+      font-size: 20px !important;
+    }
+    &.large {
+      font-size: 24px !important;
+    }
+    &.active {
+      color: #30c592;
+    }
+    &:hover {
+      color: #30c592;
+    }
+  }
+}
+
+.post-detail {
+  .m-stuff {
+    margin-bottom: 10px;
+    .border-bottom {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 3px;
+        background-color: #30c592;
+      }
+    }
+  }
+
+  .estimate-time {
+    color: #30c592;
+  }
+
+  .post-content {
+    margin-top: 1rem;
+    color: #ffffff !important;
+    .post-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .post-highlight {
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 22px;
+    }
+    .post-image {
+      margin: 2rem 0rem 1rem 0rem;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .image-caption {
+        color: #6871a2;
+        font-size: 16px;
+        line-height: 2.7;
+      }
+    }
+  }
+}
+
+.like-share {
+  .text {
+    color: #ffffff;
+  }
+
+  .social-icons {
+    .icon {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #30c592;
+      transition: all 200ms ease-in-out;
+
+      cursor: pointer;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        fill: #30c592;
+        transition: all 200ms ease-in-out;
+      }
+      &:hover {
+        background-color: #30c592;
+        svg {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}

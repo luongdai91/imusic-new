@@ -1,0 +1,187 @@
+@media screen and (max-width: 375px) {
+  .img-wrapper {
+    width: 40px;
+    height: 40px;
+    position: relative;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .left {
+    .px-1 {
+      .row {
+        padding-right: 0rem !important;
+      }
+    }
+  }
+
+  .truncate {
+    width: 120px !important;
+  }
+}
+
+@media screen and (max-width: 576px) and (min-width: 375px) {
+  // Bai hat list
+  .bai-hat-wrapper {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
+
+  // Bang xep hang
+  .bxh-hit-wrapper {
+    width: 375px;
+    height: 218px;
+  }
+
+  .bxh-song {
+    .song-large-img-wrapper {
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .img-wrapper {
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  // Bang xep hang
+  .bxh-hit-wrapper {
+    min-width: 375px;
+    min-height: 300px;
+  }
+
+  .img-wrapper {
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  // Bang xep hang
+  .bxh-hit-wrapper {
+    min-height: 300px;
+  }
+
+  .img-wrapper {
+    width: 65px;
+    height: 65px;
+
+    img {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  .truncate {
+    width: 165px !important;
+  }
+
+  // .im-suggest
+  .im-hot-topic-item {
+    img {
+      max-width: 165px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .im-suggest {
+    height: 135px !important;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1268px) {
+  // Bang xep hang
+  .bxh-hit-wrapper {
+    min-width: 400px;
+    min-height: 300px;
+  }
+
+  .song-item-med {
+    .name {
+      font-size: 14px !important;
+    }
+    .truncate {
+      width: 100px !important;
+    }
+  }
+
+  .img-wrapper {
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  // Nav tabs
+  .nav-tabs {
+    flex-direction: row !important;
+
+    .nav-item {
+      width: 100%;
+
+      .nav-link {
+        text-align: left;
+        padding-left: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .img-wrapper {
+    width: 65px;
+    height: 65px;
+
+    img {
+      width: 65px;
+      height: 65px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  // truncate specify width for bang-xep-hang page
+  .bxh.truncate {
+    width: 138px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .top-items {
+    position: absolute;
+    top: -10px !important;
+  }
+  .dots-wrapper {
+    // margin-top: -20px;
+    margin-bottom: -20px;
+  }
+}

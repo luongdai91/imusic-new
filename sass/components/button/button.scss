@@ -1,0 +1,39 @@
+// large and rounded button style
+.btn-rounded.btn-large {
+  width: 288px;
+  height: 70px;
+  margin: 0rem auto;
+  border-radius: 35px;
+  font-size: 24px;
+  background-color: #30c592;
+  color: #ffffff !important;
+  opacity: 1;
+  text-transform: uppercase;
+
+  transition: all 200ms ease-in-out;
+  &.btn-reverse {
+    background: transparent;
+    color: #30c592;
+    border: 1px solid #30c592;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      background-color: #30c592;
+      color: #ffffff;
+    }
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+  @media screen and (max-width: 1280px) {
+    width: 190px;
+    height: 56px;
+    border-radius: 28px;
+    font-size: 16px;
+  }
+}
+
+.btn-small {
+  background-color: #30c592 !important;
+  color: #ffffff !important;
+  border: none;
+}

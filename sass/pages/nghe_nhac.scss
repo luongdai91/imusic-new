@@ -1,0 +1,121 @@
+// player breadcrumb
+.player-breadcrumb {
+  color: #6871a2;
+}
+
+.player-title {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+// lyrics
+.lyrics-wrapper {
+  border: 1px solid #6871a2;
+  padding: 34px;
+
+  .lyrics-header {
+    .song-info {
+      display: flex;
+      flex-direction: column;
+
+      color: #ffffff;
+      p:nth-child(1) {
+        font-size: 30px;
+        font-family: im-med;
+        span {
+          text-transform: capitalize;
+        }
+      }
+      p:nth-child(2) {
+        font-size: 20px;
+        font-weight: im-reg;
+        span {
+          text-transform: capitalize;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        p:nth-child(1) {
+          font-size: 24px;
+        }
+        p:nth-child(2) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .copy-lyrics {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      span {
+        color: #ffffff;
+        &:nth-child(1) {
+          margin-right: 8px;
+        }
+        svg {
+          width: 16px;
+          height: 16px;
+          fill: #30c592;
+          cursor: pointer;
+          transition: all 200ms ease-in-out;
+          &:hover {
+            fill: #6871a2;
+          }
+        }
+      }
+    }
+  }
+
+  .lyrics-body {
+    .lyrics {
+      color: #6871a2;
+      .truncate {
+        width: 600px;
+        height: 250px;
+        overflow: hidden;
+        transition: height 200ms ease-in-out;
+        &.show-all {
+          height: 100%;
+        }
+        @media screen and (max-width: 992px) {
+          width: 100% !important;
+          font-size: 16px;
+        }
+        @media screen and (max-width: 992px) {
+          width: 100% !important;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.see-all-lyrics {
+  text-align: center;
+  button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0rem 2rem;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    opacity: 0.85;
+    &:hover {
+      opacity: 1;
+    }
+    span {
+      color: #30c592;
+      svg {
+        fill: #30c592;
+        width: 16px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

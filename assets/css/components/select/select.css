@@ -1,0 +1,43 @@
+.tabs-group-select {
+  display: block;
+  position: relative; }
+  .tabs-group-select .tab-selected .tab span {
+    margin-left: 12px; }
+  .tabs-group-select .tabs-dropdown {
+    border: 1px solid #30c592;
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    left: 0; }
+    .tabs-group-select .tabs-dropdown.show {
+      display: block; }
+    .tabs-group-select .tabs-dropdown .tab {
+      border-bottom: none; }
+      .tabs-group-select .tabs-dropdown .tab:hover {
+        background-color: #30c592;
+        border-bottom: 1px solid #30c592; }
+    .tabs-group-select .tabs-dropdown div:nth-child(1) {
+      border-bottom: 1px solid #ffffff; }
+
+.mobile-select {
+  position: relative; }
+  .mobile-select.bxh-nav-tabs {
+    width: 136px; }
+  .mobile-select .selected-item {
+    background-color: #30c592; }
+    .mobile-select .selected-item a {
+      color: #ffffff; }
+      .mobile-select .selected-item a i {
+        margin-left: 18px; }
+  .mobile-select ul {
+    display: none;
+    top: 42px;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+    .mobile-select ul.show {
+      display: flex; }
+    .mobile-select ul li {
+      width: 100%; }

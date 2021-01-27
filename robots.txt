@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /
+Disallow: /download/
+Disallow: /search.php
+Disallow: /up/
+Disallow: /download-video-music/
+Disallow: /download-video/
+Disallow: /download-mp3/
+Disallow: /download-music/
+Disallow: /login/

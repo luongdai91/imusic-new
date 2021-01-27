@@ -1,0 +1,54 @@
+.im-tabs {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 262px; }
+  .im-tabs .nav-item {
+    list-style: none;
+    border-bottom: 1px solid #30c592; }
+    .im-tabs .nav-item.active {
+      background-color: #30c592; }
+    .im-tabs .nav-item a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      padding: 1rem 0.8rem;
+      height: 40px;
+      color: #ffffff; }
+
+.tabs-group-select {
+  display: block;
+  position: relative; }
+  .tabs-group-select .tab-selected .tab span {
+    margin-left: 12px; }
+  .tabs-group-select .tabs-dropdown {
+    border: 1px solid #30c592;
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    left: 0; }
+    .tabs-group-select .tabs-dropdown.show {
+      display: block; }
+    .tabs-group-select .tabs-dropdown .tab {
+      border-bottom: none; }
+      .tabs-group-select .tabs-dropdown .tab:hover {
+        background-color: #30c592;
+        border-bottom: 1px solid #30c592; }
+    .tabs-group-select .tabs-dropdown div:nth-child(1) {
+      border-bottom: 1px solid #ffffff; }
+
+.mobile-tabs button {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 120px; }
+  .mobile-tabs button i {
+    font-size: 14px; }
+
+.mobile-tabs .mobile-dropdown__sub {
+  min-width: 100%; }
+  .mobile-tabs .mobile-dropdown__sub .dropdown-item.active, .mobile-tabs .mobile-dropdown__sub .dropdown-item:hover {
+    background-color: #30c592;
+    color: #ffffff; }

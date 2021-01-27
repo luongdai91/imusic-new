@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'im-reg';
+  src: url("../font/SVN-Gilroy-Regular.otf"); }
+
+@font-face {
+  font-family: 'im-med';
+  src: url("../font/SVN-Gilroy-Medium.otf"); }
+
+@font-face {
+  font-family: 'im-sb';
+  src: url("../font/SVN-Gilroy-SemiBold.otf"); }
+
+@font-face {
+  font-family: 'im-bold';
+  src: url("../font/SVN-Gilroy-Bold.otf"); }
+
+@font-face {
+  font-family: 'im-italic';
+  src: url("../font/SVN-Gilroy-Italic.otf"); }
+
+* {
+  font-family: im-reg;
+  --animate-duration: 0.5s; }
+
+a {
+  text-decoration: none; }
+a:hover {
+    text-decoration: none !important; }
+hr.im {
+  border-top: 1px solid #2e2e50;
+  opacity: 0.75; }
+
+*:focus {
+  outline: none; }
+
+.rm-pd {
+  padding: 0px !important; }
+
+@media screen and (max-width: 375px) {
+  .rm-xs-pd {
+    padding: 0px !important; } }
+
+@media screen and (min-width: 414px) {
+  .rm-md-pd {
+    padding: 0px !important; } }
+
+@media screen and (min-width: 1200px) {
+  .rm-lg-pd {
+    padding: 0px !important; } }
+
+@media screen and (min-width: 992px) {
+  .rm-lg-pr {
+    padding-right: 0px !important; } }
+
+.im-wrapper {
+  width: 1250px; }
+  .im-wrapper.container {
+    padding: 0px;
+    max-width: 1350px; }
+
+.slick-track {
+  display: flex !important; }
+
+.slick-slide {
+  height: fit-content !important; }

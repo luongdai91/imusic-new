@@ -1,0 +1,164 @@
+.plyr .plyr__poster {
+  background-size: cover !important; }
+
+.plyr .plyr--video .plyr__control {
+  margin-right: 8px; }
+  .plyr .plyr--video .plyr__control:hover {
+    background: #30c492 !important; }
+
+.plyr .plyr__autoplay {
+  margin-right: 16px !important; }
+
+.plyr--video .plyr__control:hover {
+  background-color: #30c592 !important; }
+
+#im-video-progress {
+  position: absolute;
+  bottom: 60px;
+  padding: 0rem 2rem;
+  z-index: 10;
+  background: transparent; }
+  #im-video-progress .plyr__progress {
+    width: 100%; }
+
+#im-video-controls {
+  padding-top: 0px;
+  padding: 0rem 2rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background: transparent linear-gradient(180deg, #080a1f00 0%, #080a1f 100%) 0% 0% no-repeat padding-box;
+  z-index: 11; }
+
+.video-controls__left,
+.video-controls__right {
+  display: flex; }
+
+.plyr--full-ui input[type='range'] {
+  color: #30c492 !important; }
+
+.plyr__time.plyr__time--current {
+  color: #30c492 !important; }
+
+.player-breadcrumb {
+  color: #6871a2; }
+
+.player-title {
+  color: #ffffff;
+  font-size: 30px; }
+  @media screen and (max-width: 992px) {
+    .player-title {
+      font-size: 20px !important; } }
+  @media screen and (max-width: 992px) {
+    .player-title {
+      font-size: 18px !important; } }
+
+.lyrics-wrapper {
+  border: 1px solid #6871a2;
+  padding: 34px; }
+  .lyrics-wrapper .lyrics-header .song-info {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff; }
+    .lyrics-wrapper .lyrics-header .song-info p:nth-child(1) {
+      font-size: 30px;
+      font-family: im-med; }
+      .lyrics-wrapper .lyrics-header .song-info p:nth-child(1) span {
+        text-transform: capitalize; }
+    .lyrics-wrapper .lyrics-header .song-info p:nth-child(2) {
+      font-size: 20px;
+      font-weight: im-reg; }
+      .lyrics-wrapper .lyrics-header .song-info p:nth-child(2) span {
+        text-transform: capitalize; }
+    @media screen and (max-width: 768px) {
+      .lyrics-wrapper .lyrics-header .song-info p:nth-child(1) {
+        font-size: 24px; }
+      .lyrics-wrapper .lyrics-header .song-info p:nth-child(2) {
+        font-size: 14px; } }
+  .lyrics-wrapper .lyrics-header .copy-lyrics span {
+    color: #ffffff; }
+    .lyrics-wrapper .lyrics-header .copy-lyrics span:nth-child(1) {
+      margin-right: 8px; }
+    .lyrics-wrapper .lyrics-header .copy-lyrics span svg {
+      width: 16px;
+      height: 16px;
+      fill: #30c592; }
+  .lyrics-wrapper .lyrics-body .lyrics {
+    color: #6871a2; }
+    .lyrics-wrapper .lyrics-body .lyrics .truncate {
+      width: 600px;
+      height: 250px;
+      overflow: hidden;
+      transition: height 300ms ease-in-out; }
+      .lyrics-wrapper .lyrics-body .lyrics .truncate.show-all {
+        height: 100%; }
+      @media screen and (max-width: 992px) {
+        .lyrics-wrapper .lyrics-body .lyrics .truncate {
+          width: 100% !important;
+          font-size: 16px; } }
+      @media screen and (max-width: 992px) {
+        .lyrics-wrapper .lyrics-body .lyrics .truncate {
+          width: 100% !important;
+          font-size: 14px; } }
+
+.see-all-lyrics {
+  text-align: center; }
+  .see-all-lyrics a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+    border: none !important;
+    outline: none !important;
+    background: transparent;
+    text-decoration: none;
+    opacity: 0.85; }
+    .see-all-lyrics a:hover {
+      opacity: 1; }
+    .see-all-lyrics a span {
+      color: #30c592; }
+      .see-all-lyrics a span svg {
+        fill: #30c592;
+        width: 16px;
+        font-size: 1rem; }
+
+.quality__menu {
+  position: relative;
+  width: 46px;
+  height: 24px;
+  margin-right: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.9; }
+  .quality__menu:hover {
+    opacity: 1; }
+  .quality__menu .quality-list-item {
+    display: block;
+    position: absolute;
+    bottom: 120%;
+    left: 0;
+    min-width: 100px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 300ms ease-in-out; }
+    .quality__menu .quality-list-item.show {
+      opacity: 1 !important; }
+    .quality__menu .quality-list-item .quality-item {
+      padding: 8px 10px;
+      transition: all 200ms ease-in-out; }
+      .quality__menu .quality-list-item .quality-item:hover {
+        background: #30c492;
+        color: #ffffff; }
